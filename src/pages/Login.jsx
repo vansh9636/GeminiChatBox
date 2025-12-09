@@ -21,7 +21,6 @@ const Login = () => {
     const Isfind = savedUser.find((item) => ((item.useremail == loginData.loginEmail) && (item.userpass == loginData.loginPass)));  
     if (Isfind) {
       localStorage.setItem('currentUser', JSON.stringify(Isfind));
-      //by mistake
       // setcurrentUser(JSON.parse(localStorage.getItem("currentUser")))
       (JSON.parse(localStorage.getItem('currentUser')))?setpreprompt([...JSON.parse(localStorage.getItem('currentUser')).History]):""
       alert("Login sucessfully ! ✅");
