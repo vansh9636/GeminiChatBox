@@ -1,4 +1,5 @@
-const ourapi = "AIzaSyBcyCY4iBisc4Lc8Grk14yBniBu0cSZqgk"// your api key here
+// this file is for configuring Gemini API access from Google Generative AI
+const ourapi = ""// your api key here
 
 import {
   GoogleGenerativeAI,
