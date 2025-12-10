@@ -21,8 +21,6 @@ const Login = () => {
     const Isfind = savedUser.find((item) => ((item.useremail == loginData.loginEmail) && (item.userpass == loginData.loginPass)));  
     if (Isfind) {
       localStorage.setItem('currentUser', JSON.stringify(Isfind));
-      //by mistake
-      // setcurrentUser(JSON.parse(localStorage.getItem("currentUser")))
       (JSON.parse(localStorage.getItem('currentUser')))?setpreprompt([...JSON.parse(localStorage.getItem('currentUser')).History]):""
       alert("Login sucessfully ! ✅");
       navigate("/");
@@ -61,7 +59,7 @@ const Login = () => {
             <button id='forgotpass'>Forgot password ?</button>
             <p>Not your computer? Use Guest mode to sign in pricately. <span>Learn more about using Guest mode</span></p>
             <div id='btns'>
-              <Link id='signup-log' to={'/register'}> Create account</Link>
+              <Link id='signup-log' to={'/register'}>Create account</Link>
               <button id='submitbtn' type="submit">Next</button>
             </div>
           </form>
